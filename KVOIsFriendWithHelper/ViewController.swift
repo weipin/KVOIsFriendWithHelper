@@ -20,6 +20,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func trigger(sender: AnyObject) {
+        App.sharedInstance.model.foo1 = 2.0
+        App.sharedInstance.model.foo2 = 2.0
+    }
 }
 

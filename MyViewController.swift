@@ -42,8 +42,11 @@ class MyViewController: UIViewController {
             self.slider2.value = value
         }
 
-        App.sharedInstance.model.foo1 = 0.0
-        App.sharedInstance.model.foo2 = 0.0
+        let m = App.sharedInstance.model
+        self.textField1.text = String(m.foo1)
+        self.slider1.value = Float(m.foo1)
+        self.textField2.text = String(m.foo2)
+        self.slider2.value = Float(m.foo2)
     }
 
     @IBAction func done(sender: AnyObject) {
